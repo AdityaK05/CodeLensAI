@@ -4,31 +4,31 @@
 
 @layer base {
   :root {
-    /* Midnight Plum (#211426) & Rose Gold (#C99591) */
-    --background: 284 31% 11%;        /* #211426 Midnight Plum */
-    --foreground: 4 60% 96%;          /* #FDF8F8 Soft Rose White */
-    --card: 284 27% 16%;              /* #2D1B33 Elevated Plum */
-    --card-foreground: 4 60% 96%;
-    --popover: 284 29% 14%;
-    --popover-foreground: 4 60% 96%;
-    --primary: 4 37% 68%;             /* #C99591 Rose Gold */
-    --primary-foreground: 284 31% 11%;
-    --secondary: 284 22% 21%;         /* #3B2642 */
-    --secondary-foreground: 4 45% 88%;
-    --muted: 284 20% 19%;
-    --muted-foreground: 284 15% 62%;  /* #9E88A3 */
-    --accent: 4 37% 68%;              /* #C99591 */
-    --accent-foreground: 284 31% 11%;
+    /* Mocha Brown (#2D1C13) & Cream Latte (#FAF2E8) */
+    --background: 22 40% 12%;         /* #2D1C13 Mocha Brown */
+    --foreground: 34 50% 95%;         /* #FAF2E8 Cream Latte */
+    --card: 22 35% 17%;               /* #3A2419 Dark Mocha */
+    --card-foreground: 34 50% 95%;
+    --popover: 22 35% 15%;
+    --popover-foreground: 34 50% 95%;
+    --primary: 30 46% 60%;            /* #C89868 Caramel Accent */
+    --primary-foreground: 22 40% 12%;
+    --secondary: 22 30% 22%;          /* #4A2F21 */
+    --secondary-foreground: 34 35% 85%;
+    --muted: 22 25% 20%;
+    --muted-foreground: 22 20% 65%;   /* #A89080 */
+    --accent: 30 46% 60%;             /* #C89868 */
+    --accent-foreground: 22 40% 12%;
     --destructive: 0 45% 45%;
-    --destructive-foreground: 4 60% 96%;
-    --border: 284 20% 25%;            /* #452E4E */
-    --input: 284 20% 25%;
-    --ring: 4 37% 68%;
+    --destructive-foreground: 34 50% 95%;
+    --border: 22 28% 23%;             /* #4A3022 */
+    --input: 22 28% 23%;
+    --ring: 30 46% 60%;
   }
 
   body {
-    background-color: #211426;       /* Midnight Plum */
-    color: #FDF8F8;                  /* Soft Rose White */
+    background-color: #2D1C13;       /* Mocha Brown */
+    color: #FAF2E8;                  /* Cream Latte */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
@@ -39,7 +39,7 @@
   }
 }
 
-/* Custom sleek Midnight Plum scrollbar */
+/* Custom sleek Mocha & Cream Latte scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -50,20 +50,20 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4A3052;
+  background: #C4B09B;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #684573;
+  background: #A8917A;
 }
 
-/* Minimalist Markdown in Midnight Plum & Rose Gold */
+/* Minimalist Markdown in Cream Latte & Mocha Brown */
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3,
 .markdown-content h4 {
-  color: #FFFFFF;
+  color: #2D1C13;
   font-weight: 600;
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
@@ -72,21 +72,21 @@
   gap: 0.5rem;
 }
 
-.markdown-content h1 { font-size: 1.2rem; border-bottom: 1px solid #452E4E; padding-bottom: 0.35rem; }
+.markdown-content h1 { font-size: 1.2rem; border-bottom: 1px solid #DFCEBC; padding-bottom: 0.35rem; }
 .markdown-content h2 { font-size: 1.05rem; }
 .markdown-content h3 { font-size: 0.95rem; }
 
 .markdown-content p {
   margin-bottom: 0.75rem;
   line-height: 1.65;
-  color: #E6D5E8;
+  color: #3E2723;
 }
 
 .markdown-content ul,
 .markdown-content ol {
   margin-bottom: 0.75rem;
   padding-left: 1.25rem;
-  color: #E6D5E8;
+  color: #3E2723;
 }
 
 .markdown-content li {
@@ -95,36 +95,39 @@
 }
 
 .markdown-content strong {
-  color: #FFFFFF;
+  color: #1A0F09;
   font-weight: 600;
 }
 
 .markdown-content code:not(pre code) {
-  background: rgba(201, 149, 145, 0.15);
-  color: #F2D2CF;
+  background: #EFE4D6;
+  color: #5C3A21;
   padding: 0.15rem 0.35rem;
   border-radius: 0.25rem;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.85em;
-  border: 1px solid rgba(201, 149, 145, 0.3);
+  border: 1px solid #DFCEBC;
 }
 
 .markdown-content pre {
   margin: 0.85rem 0;
-  background: #190F1D;
-  border: 1px solid #452E4E;
+  background: #24160E;
+  border: 1px solid #442B1E;
   border-radius: 0.5rem;
   padding: 0.85rem;
   overflow-x: auto;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   font-size: 0.82rem;
   line-height: 1.5;
-  color: #FDF8F8;
+  color: #FAF2E8;
 }
 
 .markdown-content blockquote {
-  border-left: 3px solid #C99591;
+  border-left: 3px solid #8D5836;
   padding-left: 0.85rem;
-  color: #D2B8D6;
+  color: #5C3A21;
+  background: #F5EAE0;
   margin: 0.75rem 0;
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.75rem;
 }

@@ -73,17 +73,17 @@ export default function HistoryPage() {
   });
 
   return (
-    <div className="h-full overflow-y-auto bg-[#211426] text-[#FDF8F8] p-6 md:p-8">
+    <div className="h-full overflow-y-auto bg-[#2D1C13] text-[#FAF2E8] p-6 md:p-8">
       <div className="max-w-4xl mx-auto space-y-6">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-[#3D2545]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-[#442B1E]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-[#2D1B33] border border-[#4A2F54] flex items-center justify-center">
-              <HistoryIcon className="w-4 h-4 text-[#C99591]" />
+            <div className="w-8 h-8 rounded-lg bg-[#3A2419] border border-[#4E3224] flex items-center justify-center">
+              <HistoryIcon className="w-4 h-4 text-[#C89868]" />
             </div>
             <div>
-              <h1 className="text-base font-semibold text-[#FDF8F8]">History</h1>
-              <p className="text-xs text-[#D6BFD9] mt-0.5">
+              <h1 className="text-base font-semibold text-[#FAF2E8]">History</h1>
+              <p className="text-xs text-[#D8C7B8] mt-0.5">
                 Past analysis sessions
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function HistoryPage() {
           {history.length > 0 && (
             <button
               onClick={handleClearAll}
-              className="flex items-center gap-1.5 text-xs text-[#E8CDCB] hover:text-[#FFFFFF] px-3 py-1 rounded-md border border-[#54335E] bg-[#311D38] hover:bg-[#42274A] transition"
+              className="flex items-center gap-1.5 text-xs text-[#E8C4B8] hover:text-[#FFFFFF] px-3 py-1 rounded-md border border-[#5C3224] bg-[#452619] hover:bg-[#5C3224] transition"
             >
               <Trash2 className="w-3.5 h-3.5" />
               <span>Clear History</span>
@@ -103,13 +103,13 @@ export default function HistoryPage() {
         {/* Search & Filter Bar */}
         <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-between">
           <div className="relative flex-1">
-            <Search className="w-4 h-4 text-[#9E88A3] absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-[#A89080] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Search code or results..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#27172E] border border-[#3D2545] rounded-lg pl-9 pr-4 py-1.5 text-xs text-[#FDF8F8] placeholder-[#9E88A3] focus:outline-none focus:border-[#C99591]"
+              className="w-full bg-[#342016] border border-[#442B1E] rounded-lg pl-9 pr-4 py-1.5 text-xs text-[#FAF2E8] placeholder-[#A89080] focus:outline-none focus:border-[#C89868]"
             />
           </div>
 
@@ -121,8 +121,8 @@ export default function HistoryPage() {
                 onClick={() => setSelectedTask(t)}
                 className={`px-2.5 py-1 text-xs rounded-md font-medium capitalize transition whitespace-nowrap ${
                   selectedTask === t
-                    ? "bg-[#C99591] text-[#211426] font-semibold"
-                    : "bg-[#27172E] text-[#D6BFD9] hover:text-[#FDF8F8] border border-[#3D2545]"
+                    ? "bg-[#FAF2E8] text-[#2D1C13] font-semibold"
+                    : "bg-[#342016] text-[#D8C7B8] hover:text-[#FAF2E8] border border-[#442B1E]"
                 }`}
               >
                 {t}
@@ -133,11 +133,11 @@ export default function HistoryPage() {
 
         {/* History List */}
         {filtered.length === 0 ? (
-          <div className="py-20 text-center flex flex-col items-center justify-center rounded-xl border border-dashed border-[#3D2545] bg-[#27172E]/40 p-8">
-            <p className="text-xs text-[#D6BFD9] mb-4">No analysis history found.</p>
+          <div className="py-20 text-center flex flex-col items-center justify-center rounded-xl border border-dashed border-[#442B1E] bg-[#342016]/40 p-8">
+            <p className="text-xs text-[#D8C7B8] mb-4">No analysis history found.</p>
             <button
               onClick={() => router.push("/workspace")}
-              className="text-xs font-semibold px-3.5 py-1.5 bg-[#C99591] hover:bg-[#D8A7A3] text-[#211426] rounded-md transition"
+              className="text-xs font-semibold px-3.5 py-1.5 bg-[#C89868] hover:bg-[#D5A779] text-[#21140E] rounded-md transition"
             >
               Open Workspace
             </button>
@@ -147,17 +147,17 @@ export default function HistoryPage() {
             {filtered.map((item) => (
               <div
                 key={item.id}
-                className="bg-[#27172E] border border-[#3D2545] rounded-lg p-4 hover:border-[#633A6E] transition group"
+                className="bg-[#342016] border border-[#442B1E] rounded-lg p-4 hover:border-[#6B4430] transition group"
               >
                 <div className="flex items-start justify-between gap-4 mb-2.5">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded bg-[#381F3E] text-[#C99591] border border-[#522E5C]">
+                    <span className="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider rounded bg-[#452B1E] text-[#FAF2E8] border border-[#5C3A29]">
                       {item.task}
                     </span>
-                    <span className="px-2 py-0.5 text-[10px] font-mono text-[#D6BFD9] bg-[#1E1224] rounded border border-[#381E42]">
+                    <span className="px-2 py-0.5 text-[10px] font-mono text-[#E0D0C0] bg-[#24160E] rounded border border-[#3E261A]">
                       {item.language}
                     </span>
-                    <span className="text-[11px] text-[#9E88A3] flex items-center gap-1 font-mono">
+                    <span className="text-[11px] text-[#A89080] flex items-center gap-1 font-mono">
                       <Clock className="w-3 h-3" />
                       {new Date(item.timestamp).toLocaleString()}
                     </span>
@@ -167,7 +167,7 @@ export default function HistoryPage() {
                     <button
                       onClick={() => handleOpenInWorkspace(item)}
                       title="Load into Editor"
-                      className="flex items-center gap-1 text-xs text-[#C99591] hover:text-[#FFFFFF] bg-[#381F3E] px-2 py-0.5 rounded border border-[#522E5C] transition"
+                      className="flex items-center gap-1 text-xs text-[#FAF2E8] hover:text-[#FFFFFF] bg-[#452B1E] px-2 py-0.5 rounded border border-[#5C3A29] transition"
                     >
                       <span>Open</span>
                       <ExternalLink className="w-3 h-3" />
@@ -175,10 +175,10 @@ export default function HistoryPage() {
                     <button
                       onClick={() => handleCopy(item.id, item.code)}
                       title="Copy Code"
-                      className="p-1 text-[#D6BFD9] hover:text-[#FDF8F8] bg-[#1E1224] rounded border border-[#381E42] transition"
+                      className="p-1 text-[#D8C7B8] hover:text-[#FAF2E8] bg-[#24160E] rounded border border-[#3E261A] transition"
                     >
                       {copiedId === item.id ? (
-                        <Check className="w-3.5 h-3.5 text-[#C99591]" />
+                        <Check className="w-3.5 h-3.5 text-[#C89868]" />
                       ) : (
                         <Copy className="w-3.5 h-3.5" />
                       )}
@@ -186,7 +186,7 @@ export default function HistoryPage() {
                     <button
                       onClick={() => handleDelete(item.id)}
                       title="Delete record"
-                      className="p-1 text-[#D6BFD9] hover:text-[#E8CDCB] bg-[#1E1224] rounded border border-[#381E42] transition"
+                      className="p-1 text-[#D8C7B8] hover:text-[#FAF2E8] bg-[#24160E] rounded border border-[#3E261A] transition"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
                     </button>
@@ -194,12 +194,12 @@ export default function HistoryPage() {
                 </div>
 
                 {/* Code snippet */}
-                <pre className="bg-[#190E1C] border border-[#331B3A] rounded p-2.5 text-xs font-mono text-[#F2D7E0] overflow-x-auto max-h-28 line-clamp-3">
+                <pre className="bg-[#24160E] border border-[#3E261A] rounded p-2.5 text-xs font-mono text-[#FAF2E8] overflow-x-auto max-h-28 line-clamp-3">
                   {item.code.slice(0, 260)}
                 </pre>
 
                 {/* Result snippet */}
-                <div className="mt-2 text-xs text-[#D6BFD9] line-clamp-2 leading-relaxed">
+                <div className="mt-2 text-xs text-[#D8C7B8] line-clamp-2 leading-relaxed">
                   {item.result.replace(/[#*`_]/g, "").slice(0, 180)}...
                 </div>
               </div>

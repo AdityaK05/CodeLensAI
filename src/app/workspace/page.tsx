@@ -225,21 +225,21 @@ export default function WorkspacePage() {
   const charCount = code.length;
 
   return (
-    <div className="w-full h-full flex flex-col bg-[#211426] text-[#FDF8F8] overflow-hidden">
-      {/* Top Action Toolbar */}
-      <div className="h-12 border-b border-[#3D2545] px-4 flex items-center justify-between bg-[#27172E] shrink-0 gap-3">
+    <div className="w-full h-full flex flex-col bg-[#2D1C13] text-[#FAF2E8] overflow-hidden">
+      {/* Top Action Toolbar in Mocha Brown */}
+      <div className="h-12 border-b border-[#442B1E] px-4 flex items-center justify-between bg-[#342016] shrink-0 gap-3">
         {/* Left Toolbar: Language & Presets */}
         <div className="flex items-center gap-2 overflow-x-auto py-1">
           {/* Language Selector */}
-          <div className="flex items-center gap-1.5 bg-[#211426] border border-[#3D2545] rounded-md px-2.5 py-1 text-xs text-[#D6BFD9]">
-            <FileCode2 className="w-3.5 h-3.5 text-[#C99591] shrink-0" />
+          <div className="flex items-center gap-1.5 bg-[#2D1C13] border border-[#4E3224] rounded-md px-2.5 py-1 text-xs text-[#E0D0C0]">
+            <FileCode2 className="w-3.5 h-3.5 text-[#C89868] shrink-0" />
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
-              className="bg-transparent text-xs text-[#FDF8F8] focus:outline-none cursor-pointer pr-1"
+              className="bg-transparent text-xs text-[#FAF2E8] focus:outline-none cursor-pointer pr-1"
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
-                <option key={lang.id} value={lang.id} className="bg-[#211426] text-[#FDF8F8]">
+                <option key={lang.id} value={lang.id} className="bg-[#2D1C13] text-[#FAF2E8]">
                   {lang.name}
                 </option>
               ))}
@@ -247,8 +247,8 @@ export default function WorkspacePage() {
           </div>
 
           {/* Presets */}
-          <div className="flex items-center gap-1.5 bg-[#211426] border border-[#3D2545] rounded-md px-2.5 py-1 text-xs text-[#D6BFD9]">
-            <Layers className="w-3.5 h-3.5 text-[#C99591] shrink-0" />
+          <div className="flex items-center gap-1.5 bg-[#2D1C13] border border-[#4E3224] rounded-md px-2.5 py-1 text-xs text-[#E0D0C0]">
+            <Layers className="w-3.5 h-3.5 text-[#C89868] shrink-0" />
             <select
               defaultValue=""
               onChange={(e) => {
@@ -256,13 +256,13 @@ export default function WorkspacePage() {
                 if (found) handleLoadPreset(found);
                 e.target.value = "";
               }}
-              className="bg-transparent text-xs text-[#FDF8F8] focus:outline-none cursor-pointer pr-1"
+              className="bg-transparent text-xs text-[#FAF2E8] focus:outline-none cursor-pointer pr-1"
             >
-              <option value="" disabled className="bg-[#211426] text-[#9E88A3]">
+              <option value="" disabled className="bg-[#2D1C13] text-[#A68875]">
                 Load Example...
               </option>
               {CODE_PRESETS.map((p) => (
-                <option key={p.id} value={p.id} className="bg-[#211426] text-[#FDF8F8]">
+                <option key={p.id} value={p.id} className="bg-[#2D1C13] text-[#FAF2E8]">
                   {p.name}
                 </option>
               ))}
@@ -270,21 +270,21 @@ export default function WorkspacePage() {
           </div>
 
           {/* Editor Action Tools */}
-          <div className="hidden sm:flex items-center gap-1 pl-2 border-l border-[#3D2545]">
+          <div className="hidden sm:flex items-center gap-1 pl-2 border-l border-[#4E3224]">
             <button
               onClick={handleFormatCode}
               title="Format Code"
-              className="p-1.5 rounded-md text-[#D6BFD9] hover:text-[#FDF8F8] hover:bg-[#341F3C] transition"
+              className="p-1.5 rounded-md text-[#D8C7B8] hover:text-[#FAF2E8] hover:bg-[#442B1E] transition"
             >
               <Wand2 className="w-3.5 h-3.5" />
             </button>
             <button
               onClick={handleCopyCode}
               title="Copy Code"
-              className="p-1.5 rounded-md text-[#D6BFD9] hover:text-[#FDF8F8] hover:bg-[#341F3C] transition"
+              className="p-1.5 rounded-md text-[#D8C7B8] hover:text-[#FAF2E8] hover:bg-[#442B1E] transition"
             >
               {copiedCode ? (
-                <Check className="w-3.5 h-3.5 text-[#C99591]" />
+                <Check className="w-3.5 h-3.5 text-[#C89868]" />
               ) : (
                 <Copy className="w-3.5 h-3.5" />
               )}
@@ -292,7 +292,7 @@ export default function WorkspacePage() {
             <button
               onClick={() => fileInputRef.current?.click()}
               title="Upload File"
-              className="p-1.5 rounded-md text-[#D6BFD9] hover:text-[#FDF8F8] hover:bg-[#341F3C] transition"
+              className="p-1.5 rounded-md text-[#D8C7B8] hover:text-[#FAF2E8] hover:bg-[#442B1E] transition"
             >
               <Upload className="w-3.5 h-3.5" />
             </button>
@@ -306,7 +306,7 @@ export default function WorkspacePage() {
             <button
               onClick={handleDownloadCode}
               title="Download Code"
-              className="p-1.5 rounded-md text-[#D6BFD9] hover:text-[#FDF8F8] hover:bg-[#341F3C] transition"
+              className="p-1.5 rounded-md text-[#D8C7B8] hover:text-[#FAF2E8] hover:bg-[#442B1E] transition"
             >
               <Download className="w-3.5 h-3.5" />
             </button>
@@ -317,7 +317,7 @@ export default function WorkspacePage() {
                 setError(null);
               }}
               title="Clear Editor"
-              className="p-1.5 rounded-md text-[#D6BFD9] hover:text-[#E8CDCB] hover:bg-[#341F3C] transition"
+              className="p-1.5 rounded-md text-[#D8C7B8] hover:text-[#FAF2E8] hover:bg-[#442B1E] transition"
             >
               <Trash2 className="w-3.5 h-3.5" />
             </button>
@@ -327,7 +327,7 @@ export default function WorkspacePage() {
         {/* Right Toolbar: Task Selection & Run */}
         <div className="flex items-center gap-2.5">
           {/* Task Pills */}
-          <div className="flex items-center gap-0.5 bg-[#211426] p-0.5 rounded-md border border-[#3D2545]">
+          <div className="flex items-center gap-0.5 bg-[#2D1C13] p-0.5 rounded-md border border-[#4E3224]">
             {(
               [
                 { id: "explain", label: "Explain" },
@@ -342,8 +342,8 @@ export default function WorkspacePage() {
                 onClick={() => setTask(t.id)}
                 className={`px-2.5 py-1 text-xs rounded font-medium transition-colors ${
                   task === t.id
-                    ? "bg-[#C99591] text-[#211426] font-semibold"
-                    : "text-[#D6BFD9] hover:text-[#FDF8F8]"
+                    ? "bg-[#FAF2E8] text-[#2D1C13] font-semibold"
+                    : "text-[#D8C7B8] hover:text-[#FAF2E8]"
                 }`}
               >
                 {t.label}
@@ -351,11 +351,11 @@ export default function WorkspacePage() {
             ))}
           </div>
 
-          {/* Minimalist Run Button in Rose Gold */}
+          {/* Minimalist Run Button in Warm Caramel / Latte Accent */}
           <button
             onClick={handleAnalyze}
             disabled={isLoading}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#C99591] hover:bg-[#D8A7A3] disabled:opacity-50 text-[#211426] rounded-md text-xs font-semibold shadow-sm transition-all"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#C89868] hover:bg-[#D5A779] disabled:opacity-50 text-[#21140E] rounded-md text-xs font-semibold shadow-sm transition-all"
           >
             {isLoading ? (
               <>
@@ -408,7 +408,7 @@ export default function WorkspacePage() {
         </div>
 
         {/* AI Explanation Panel */}
-        <div className="w-full md:w-[480px] lg:w-[540px] xl:w-[600px] h-full shrink-0 flex flex-col min-h-0 border-l border-[#3D2545]">
+        <div className="w-full md:w-[480px] lg:w-[540px] xl:w-[600px] h-full shrink-0 flex flex-col min-h-0 border-l border-[#DFCEBC]">
           <ExplanationPanel
             content={content}
             isLoading={isLoading}
