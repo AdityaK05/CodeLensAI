@@ -9,8 +9,8 @@
 │                              CLIENT BROWSER                            │
 │  ┌─────────────────────────┐            ┌────────────────────────────┐ │
 │  │ Monaco Code Editor      │            │ AI Explanation Panel       │ │
-│  │ Theme: Cream Latte      │            │ Theme: Midnight Plum       │ │
-│  │ (#FAF2E8)               │            │ (#211426)                  │ │
+│  │ Theme: Cream Latte      │            │ Theme: Cream Latte         │ │
+│  │ (#FAF2E8)               │            │ (#FAF2E8)                  │ │
 │  └────────────┬────────────┘            └─────────────▲──────────────┘ │
 │               │                                       │                │
 │               │ Code + Task Payload                   │ Stream Chunks  │
@@ -50,9 +50,9 @@
 ## 2. Core Architectural Pillars
 
 ### 2.1 Aesthetic & Design System
-- **Midnight Plum (`#211426`)**: Dominates chrome, panels, headers, dialogs, and navigation.
-- **Rose Gold (`#C99591`)**: Serves as the primary functional accent (buttons, icons, active pills).
-- **Cream Latte (`#FAF2E8`)**: Houses the Monaco Editor canvas, paired with rich Mocha Brown syntax highlighting to eliminate eye fatigue during extended coding sessions.
+- **Mocha Brown (`#2D1C13`, `#3A2419`)**: Powers the top navigation bar, header chrome, toolbars, and action containers.
+- **Cream Latte (`#FAF2E8`, `#EFE3D5`)**: Houses both the Monaco Editor canvas and the AI Analysis panel, paired with rich Mocha Brown typography and syntax highlighting to eliminate eye fatigue during extended coding sessions.
+- **Caramel Bronze (`#C89868`)**: Serves as the functional accent (run button, status indicator, active states).
 
 ### 2.2 Monaco Editor Component
 - Dynamically imported with `{ ssr: false }` to prevent SSR window reference conflicts.

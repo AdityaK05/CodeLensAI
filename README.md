@@ -10,7 +10,7 @@
 [![Vercel AI SDK](https://img.shields.io/badge/Vercel_AI_SDK-7.0-black?style=flat-square)](https://sdk.vercel.ai/)
 [![Monaco Editor](https://img.shields.io/badge/Monaco_Editor-0.50-007acc?style=flat-square&logo=visual-studio-code)](https://microsoft.github.io/monaco-editor/)
 
-*A minimalist developer workspace engineered with a bespoke dual-contrast palette: **Midnight Plum** (`#211426`), **Rose Gold** (`#C99591`), and **Cream Latte** (`#FAF2E8`).*
+*A minimalist developer workspace engineered with a bespoke dual-contrast palette: **Mocha Brown** (`#2D1C13`), **Cream Latte** (`#FAF2E8`), and **Caramel Bronze** (`#C89868`).*
 
 </div>
 
@@ -23,8 +23,8 @@
 ### 🌟 Key Highlights
 
 - **Dual-Contrast Minimalist Aesthetic**:
-  - **Surrounding Chrome & AI Panel**: *Midnight Plum* (`#211426`) with *Rose Gold* (`#C99591`) accents.
-  - **Code Editor Canvas**: *Cream Latte* (`#FAF2E8`) with rich *Mocha Brown* syntax highlighting for soothing, zero-fatigue readability.
+  - **Top Bar & Action Chrome**: *Mocha Brown* (`#2D1C13`, `#3A2419`) with *Caramel Bronze* (`#C89868`) accents.
+  - **Code Editor & AI Analysis Panel**: *Cream Latte* (`#FAF2E8`) with rich *Mocha Brown* typography and syntax highlighting for soothing, zero-fatigue readability.
 - **Deep Code Intelligence Modes**:
   - 📌 **Code Explanation**: Architectural walkthroughs, design patterns, and logic analysis.
   - 🚨 **Bug Audit & Fixes**: Static vulnerability scans, edge-case failure detection, and production-ready refactors.
@@ -55,9 +55,9 @@
 ```mermaid
 graph TD
     Client["Client Browser (Next.js 16 + React 18)"]
-    Nav["Navigation & Header"]
+    Nav["Navigation & Header (Mocha Brown #2D1C13)"]
     Editor["Monaco Editor (Cream Latte #FAF2E8)"]
-    Panel["AI Panel (Midnight Plum #211426)"]
+    Panel["AI Panel (Cream Latte #FAF2E8)"]
     Storage["Local Storage (History & Settings)"]
 
     API_Analyze["/api/analyze (Edge Stream Route)"]
